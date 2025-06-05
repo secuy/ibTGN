@@ -15,7 +15,7 @@ nibabel == 5.2.1
 ```
 
 ### Usage
-You can change the file:"./utils/input_data.py" to your construction graph data. And you must change "args.py" for training metrics.
+You can change the file "./utils/input_data.py" code to your construction graph data reading code. And you must change "args.py" for training metrics.
 
 Then you can run
 ```
