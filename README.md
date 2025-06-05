@@ -23,4 +23,9 @@ python train.py
 ```
 It saves the training stage metrics in figure. And the weight file saves in "trained_model".
 
-Next, use the weight model and "cmp_HP.py" to compare. At the same time, you should modify the file: "test_args.py" to set the metics. 
+Next, use the weight model and run compare scripts. 
+```
+python cmp_HP.py
+```
+
+At the same time, you should modify the file: "test_args.py" to set the metics. 
