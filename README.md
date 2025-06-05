@@ -1,7 +1,7 @@
 # ibTGN
 ### EXPLORING CONSISTENCY OF CONNECTOME ACROSS SPECIES USING INTER-BUNDLE TOPOLOGICAL GRAPH NETWORK (IBTGN)
 
-This project is the source code of a paper published at the IEEE ISBI 2025 conference, titled: Exploring Consistency of Connectome Across Species Using Inter-Bundle Topological Graph Network (ibTGN).
+This project is the source code of a paper published at the __IEEE ISBI 2025__ conference, titled: __Exploring Consistency of Connectome Across Species Using Inter-Bundle Topological Graph Network (ibTGN)__.
 
 ### Dependence
 ```
