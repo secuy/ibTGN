@@ -33,7 +33,7 @@ It encodes the topological structure of brain tractography as a graph and levera
 ├── trained_model/          # Saved models
 ├── figure/                 # Training plots
 └── cmp_data_v2/            # Fiber cluster data used for evaluation and visualization
-
+```
 
 
 ### Dependence
