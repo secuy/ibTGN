@@ -20,19 +20,18 @@ It encodes the topological structure of brain tractography as a graph and levera
 ## Project Structure
 
 ```bash
-├── train.py                # Training script for GAE or VGAE
-├── model.py                # GAE/VGAE model definitions and GCN layers
-├── cmp_HP.py               # Cross-species comparison and visualization
 ├── args.py                 # Training configuration
+├── cmp_HP.py               # Cross-species comparison and visualization
+├── dataset.py              # GraphDataset class for loading input graphs
+├── model.py                # GAE/VGAE model definitions and GCN layers
 ├── test_args.py            # Evaluation/test configuration
-├── dataset/                # Custom Dataset loader
-│   └── GraphDataset.py     # GraphDataset class for loading input graphs
-├── utils/                  # Utilities for preprocessing and analysis
-│   ├── preprocessing.py    # Graph preprocessing utilities
-│   └── calc_code_euc.py    # Latent space nearest neighbor search
-├── trained_model/          # Saved models
-├── figure/                 # Training plots
-└── cmp_data_v2/            # Fiber cluster data used for evaluation and visualization
+├── train.py                # Training script for GAE or VGAE
+└── utils
+    ├── calc_code_euc.py    # Latent space nearest neighbor search
+    ├── input_data.py       # input data code file
+    ├── preprocessing.py    # Graph preprocessing utilities
+    ├── readTck_Trk.py      # read tck and trk file
+    └── readVTK.py          # read vtk file
 ```
 
 
