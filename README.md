@@ -2,6 +2,50 @@
 ### EXPLORING CONSISTENCY OF CONNECTOME ACROSS SPECIES USING INTER-BUNDLE TOPOLOGICAL GRAPH NETWORK (IBTGN)
 
 This project is the source code of a paper published at the __IEEE ISBI 2025__ conference, titled: __Exploring Consistency of Connectome Across Species Using Inter-Bundle Topological Graph Network (ibTGN)__.
+# Cross-Species Connectome Consistency via Inter-Bundle Topological Graph Network (ibTGN)
+
+## Introduction
+
+This repository contains the official implementation of the method proposed in the paper:
+
+> **Exploring Consistency of Connectome Across Species Using Inter-Bundle Topological Graph Network (ibTGN)**  
+> *Accepted at MICCAI 2024*
+
+Understanding how white matter structures are preserved across species is a fundamental question in comparative neuroscience. However, traditional registration-based methods suffer from inaccuracies due to differences in brain morphology and size, particularly when comparing humans and non-human primates.
+
+To address this, **we propose a novel registration-free approach**:  
+> **Inter-Bundle Topological Graph Network (ibTGN)**  
+It encodes the topological structure of brain tractography as a graph and leverages a (variational) graph autoencoder to learn low-dimensional embeddings that preserve intra-species and inter-species bundle topology. Cross-species homologous bundles are identified in latent space, enabling robust and efficient structural alignment across species.
+
+---
+
+# Key Contributions
+
+- **Registration-Free**: Avoids error-prone cross-species registration.
+- **Graph-Based Representation**: Constructs inter-bundle topological graphs from tractography.
+- **Homology Discovery**: Identifies morphologically and functionally similar bundles across species.
+- **VGAE-based Alignment**: Learns species-agnostic latent embeddings of fiber bundle graphs.
+
+---
+
+## Project Structure
+
+```bash
+├── train.py                # Training script for GAE or VGAE
+├── model.py                # GAE/VGAE model definitions and GCN layers
+├── cmp_HP.py               # Cross-species comparison and visualization
+├── args.py                 # Training configuration
+├── test_args.py            # Evaluation/test configuration
+├── dataset/                # Custom Dataset loader
+│   └── GraphDataset.py     # GraphDataset class for loading input graphs
+├── utils/                  # Utilities for preprocessing and analysis
+│   ├── preprocessing.py    # Graph preprocessing utilities
+│   └── calc_code_euc.py    # Latent space nearest neighbor search
+├── trained_model/          # Saved models
+├── figure/                 # Training plots
+└── cmp_data_v2/            # Fiber cluster data used for evaluation and visualization
+
+
 
 ### Dependence
 ```
