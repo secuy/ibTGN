@@ -8,7 +8,7 @@ It encodes the topological structure of brain tractography as a graph and levera
 
 ---
 
-# Key Contributions
+## Key Contributions
 
 - **Registration-Free**: Avoids error-prone cross-species registration.
 - **Graph-Based Representation**: Constructs inter-bundle topological graphs from tractography.
@@ -34,8 +34,9 @@ It encodes the topological structure of brain tractography as a graph and levera
     └── readVTK.py          # read vtk file
 ```
 
+---
 
-### Dependence
+## Dependence
 ```
 Python == 3.8
 Pytorch == 1.12.1
@@ -46,7 +47,9 @@ scipy == 1.8.0
 nibabel == 5.2.1
 ```
 
-### Usage
+---
+
+## Usage
 You can change the file "./utils/input_data.py" code to your construction graph data reading code. And you must change "args.py" for training metrics.
 
 Then you can run
