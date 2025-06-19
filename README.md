@@ -6,15 +6,7 @@ This project is the source code of a paper published at the __IEEE ISBI 2025__ c
 
 ## Introduction
 
-This repository contains the official implementation of the method proposed in the paper:
-
-> **Exploring Consistency of Connectome Across Species Using Inter-Bundle Topological Graph Network (ibTGN)**  
-> *Accepted at MICCAI 2024*
-
 Understanding how white matter structures are preserved across species is a fundamental question in comparative neuroscience. However, traditional registration-based methods suffer from inaccuracies due to differences in brain morphology and size, particularly when comparing humans and non-human primates.
-
-To address this, **we propose a novel registration-free approach**:  
-> **Inter-Bundle Topological Graph Network (ibTGN)**  
 It encodes the topological structure of brain tractography as a graph and leverages a (variational) graph autoencoder to learn low-dimensional embeddings that preserve intra-species and inter-species bundle topology. Cross-species homologous bundles are identified in latent space, enabling robust and efficient structural alignment across species.
 
 ---
