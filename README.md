@@ -50,17 +50,54 @@ nibabel == 5.2.1
 ---
 
 ## Usage
-You can change the file "./utils/input_data.py" code to your construction graph data reading code. And you must change "args.py" for training metrics.
 
-Then you can run
-```
+### Step 1: Prepare Data
+
+Place processed fiber clustering `.npy` files in `cmp_data_v2/sub-XXX/cluser_*.npy`.
+You can generate these using DSI Studio or pre-supplied data format with `m=15` resampled points per streamline.
+
+### Step 2: Train the Model
+
+Train the model using `GAE` or `VGAE`:
+
+```bash
 python train.py
 ```
-It saves the training stage metrics in figure. And the weight file saves in "trained_model".
 
-Next, use the weight model and run compare scripts. 
+Configuration is controlled via `args.py`, e.g.:
+
+```python
+model = 'GAE'           # or 'VGAE'
+input_dim = 45
+hidden1_dim = 32
+hidden2_dim = 16
+num_epoch = 30
 ```
+Training outputs:
+- `trained_model/GAE_model.pth`
+- Training curves in `figure/GAE_metric.png`
+
+### Step 3: Cross-Species Evaluation
+Run `cmp_HP.py` to:
+
+- Load latent codes
+- Search nearest bundles in target species
+- Render homologous fibers for comparison
+
+```bash
 python cmp_HP.py
 ```
 
-At the same time, you should modify the file: "test_args.py" to set the metics. 
+Modify `test_args.py` to switch direction of comparison (human → monkey or monkey → human) and target subjects.
+
+## Citation
+If you find this code useful, please consider citing:
+
+```bibtex
+@inproceedings{ibTGN,
+  title={Exploring Consistency of Connectome Across Species Using Inter-Bundle Topological Graph Network},
+  author={Yazhe Zhai, Yu Xie, Yifei He,	Xinyuan Zhang, Jiaolong Qin, Ye Wu},
+  booktitle={International Symposium on Biomedical Imaging 2025(ISBI)},
+  year={2025}
+}
+```
